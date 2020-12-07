@@ -4,4 +4,4 @@
 
 ## 次は
 
-[../README.md](README) に戻って次の手順に進みます
+[README](../README.md) に戻って次の手順に進みます

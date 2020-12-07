@@ -56,4 +56,4 @@ Raspberry Pi で Node-RED を動かす場合は、上記とは別の対応が必
 
 ## 次は
 
-[../README.md](README) に戻って次の手順に進みます
+[README](../README.md) に戻って次の手順に進みます

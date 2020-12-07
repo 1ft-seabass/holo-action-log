@@ -52,4 +52,4 @@ Select the application package の項目の `ファイルを選択` をクリッ
 
 ## 次は
 
-[../README.md](README) に戻って次の手順に進みます
+[README.md](../README) に戻って次の手順に進みます
