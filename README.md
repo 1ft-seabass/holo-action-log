@@ -32,13 +32,13 @@ Node-RED のローカルネットワーク内のIPアドレスを把握してお
 * IPアドレス
   * Node-RED のローカルネットワーク内のIPアドレスを把握したもの
 * TCPポート番号
-  * Node-RED のフローでTCPポート番号の変更がなければ `18001` のままでOK
+  * Node-RED のフローでTCPポート番号の変更がなければ `18801` のままでOK
 
 ## 4. Node-RED にフローをインポート
 
 [こちらのREADME](./node-red/00_import_flow.md) を参考にNode-RED にフローをインポートをお願いします。
 
-## 4. HoloLens 2 と Node-RED 連携して試してみる
+## 5. HoloLens 2 と Node-RED 連携して試してみる
 
 ![image](https://i.gyazo.com/cd54c452cf103cea075cc8c96afbb8ab.png)
 
