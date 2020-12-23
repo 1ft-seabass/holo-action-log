@@ -64,7 +64,21 @@ Node-RED に `flow.json` をドラッグアンドドロップします。この�
 
 ## CSV の保存先を設定
 
-（あとで書く）
+![image](https://i.gyazo.com/a9adb3dc98fe0bdbe274f716a2237804.png)
+
+フロー群の中からこのフローを探しましょう。
+
+![image](https://i.gyazo.com/3992f6307272a6cfef3cbd2c0640f4ab.png)
+
+`デフォルトパス hololens-record.csv` という名前の inject ノードをクリックします。
+
+![image](https://i.gyazo.com/5c05ff437877975832066f24074fa7a5.png)
+
+payload の設定を、今回保存したいファイルパスに変更しましょう。
+
+![image](https://i.gyazo.com/ae53e22bc65cf171748205fc660f8084.png)
+
+右上のデプロイをクリックしてプログラムを確定させます。
 
 ## 動作確認
 
@@ -72,7 +86,7 @@ Node-RED に `flow.json` をドラッグアンドドロップします。この�
 
 この写真のようにサイドバーの ![image](https://i.gyazo.com/2516e5d8857f4e560ebb70dc60da524d.png) をクリックして `ダッシュボード` をクリックします。
 
-![image](https://i.gyazo.com/86e908d9d7f718fcdaf3df77eff08286.png)
+![image](https://i.gyazo.com/e9aaab3ddb3aa2fd7fc82c7dfdc74abc.png)
 
 ダッシュボードの詳細が表示されます。
 
@@ -80,9 +94,23 @@ Node-RED に `flow.json` をドラッグアンドドロップします。この�
 
 この赤枠で囲われたボタンをクリックするとダッシュボードが表示されます。
 
-![image](https://i.gyazo.com/cd54c452cf103cea075cc8c96afbb8ab.png)
+![image](https://i.gyazo.com/8afa6dbfae72136e4f58ee6ab8ce562d.png)
 
 ダッシュボードが表示されたらOKです！
+
+## CSV の保存先を確認
+
+![image](https://i.gyazo.com/e3437df18644c8529b08ab383ab5d936.png)
+
+右上のメニューを開きます。
+
+![image](https://i.gyazo.com/fda0bd91f2d6bc3803b6f8c558660e9d.png)
+
+管理画面をクリックします。
+
+![image](https://i.gyazo.com/cf1bd0bacb2ab103733bd16cd1daeb9a.png)
+
+`HoloLens 記録 CSV ファイルパス` で設定値が正しいか確認しましょう。
 
 ## 次は
 

@@ -51,3 +51,23 @@ HoloLens 2 でアプリを起動します。
 ![image](https://i.gyazo.com/a86c003885de89b7450d9a8d2988d97a.png)
 
 ダッシュボードに値が送り込まれてくるはずです。
+
+## 6. データの記録開始と終了
+
+![image](https://i.gyazo.com/0aa4fd9c2b136ac8bce80bc3df4a9700.png)
+
+ダッシュボード > HoloLens のところに `データ記録` という項目にスイッチがあります。
+
+![image](https://i.gyazo.com/1dc0e268b5f9ad940a79957e34725944.png)
+
+これを ON にすると記録がはじまり、record start というメッセージが CSV に記録されます。また、このようにスイッチの下部に、CSV へ記録された最新のデータが 1 行確認できます。
+
+![image](https://i.gyazo.com/6167ef9d9f600c0c2ae9fb5097269d17.png)
+
+OFF にすると record end というメッセージが CSV に記録されます。
+
+**この設定は Node-RED を再度デプロイすると、一旦 OFF に戻ります。**
+
+![image](https://i.gyazo.com/1b9383d5d5e174696a3550561bc2fb5d.png)
+
+このようにログが記録されるので、記録の開始終了がわかりやすくなります。

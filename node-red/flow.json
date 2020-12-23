@@ -1,1726 +1,1790 @@
 [
-  {
-      "id": "37a688b5.e4aa48",
-      "type": "tcp in",
-      "z": "46980af6.f32844",
-      "name": "",
-      "server": "server",
-      "host": "",
-      "port": "18801",
-      "datamode": "stream",
-      "datatype": "utf8",
-      "newline": "",
-      "topic": "",
-      "base64": false,
-      "x": 120,
-      "y": 360,
-      "wires": [
-          [
-              "ddacd7cf.9730b8"
-          ]
-      ]
-  },
-  {
-      "id": "db02cc0.b056f38",
-      "type": "debug",
-      "z": "46980af6.f32844",
-      "name": "",
-      "active": false,
-      "tosidebar": true,
-      "console": false,
-      "tostatus": false,
-      "complete": "false",
-      "x": 470,
-      "y": 360,
-      "wires": []
-  },
-  {
-      "id": "ddacd7cf.9730b8",
-      "type": "json",
-      "z": "46980af6.f32844",
-      "name": "",
-      "property": "payload",
-      "action": "",
-      "pretty": false,
-      "x": 270,
-      "y": 360,
-      "wires": [
-          [
-              "db02cc0.b056f38",
-              "823f758a.a52f48",
-              "a8f26b60.f15598",
-              "d0bf0622.340968",
-              "b84b712c.4b722",
-              "1d4c936f.8c6e0d",
-              "4f9cb408.5f05cc",
-              "82d98b39.01e768",
-              "7cdceba9.e8e684",
-              "beb371cd.c7b85",
-              "7a783332.0d4a3c",
-              "36b3895b.be33e6"
-          ]
-      ]
-  },
-  {
-      "id": "9a803695.9ecb78",
-      "type": "ui_gauge",
-      "z": "46980af6.f32844",
-      "name": "",
-      "group": "98db0617.e694d8",
-      "order": 0,
-      "width": 0,
-      "height": 0,
-      "gtype": "gage",
-      "title": "eyeGazeX",
-      "label": "units",
-      "format": "{{value}}",
-      "min": "-2",
-      "max": "2",
-      "colors": [
-          "#00b500",
-          "#e6e600",
-          "#ca3838"
-      ],
-      "seg1": "",
-      "seg2": "",
-      "x": 730,
-      "y": 500,
-      "wires": []
-  },
-  {
-      "id": "823f758a.a52f48",
-      "type": "change",
-      "z": "46980af6.f32844",
-      "name": "eyeGazeX",
-      "rules": [
-          {
-              "t": "set",
-              "p": "payload",
-              "pt": "msg",
-              "to": "payload.eyeGazeX",
-              "tot": "msg"
-          }
-      ],
-      "action": "",
-      "property": "",
-      "from": "",
-      "to": "",
-      "reg": false,
-      "x": 470,
-      "y": 500,
-      "wires": [
-          [
-              "9a803695.9ecb78"
-          ]
-      ]
-  },
-  {
-      "id": "a8f26b60.f15598",
-      "type": "change",
-      "z": "46980af6.f32844",
-      "name": "eyeGazeY",
-      "rules": [
-          {
-              "t": "set",
-              "p": "payload",
-              "pt": "msg",
-              "to": "payload.eyeGazeY",
-              "tot": "msg"
-          }
-      ],
-      "action": "",
-      "property": "",
-      "from": "",
-      "to": "",
-      "reg": false,
-      "x": 470,
-      "y": 540,
-      "wires": [
-          [
-              "3f48bc2b.cc2654"
-          ]
-      ]
-  },
-  {
-      "id": "3f48bc2b.cc2654",
-      "type": "ui_gauge",
-      "z": "46980af6.f32844",
-      "name": "",
-      "group": "98db0617.e694d8",
-      "order": 0,
-      "width": 0,
-      "height": 0,
-      "gtype": "gage",
-      "title": "eyeGazeY",
-      "label": "units",
-      "format": "{{value}}",
-      "min": "-2",
-      "max": "2",
-      "colors": [
-          "#00b500",
-          "#e6e600",
-          "#ca3838"
-      ],
-      "seg1": "",
-      "seg2": "",
-      "x": 730,
-      "y": 540,
-      "wires": []
-  },
-  {
-      "id": "fef5bed2.9f4ed",
-      "type": "ui_gauge",
-      "z": "46980af6.f32844",
-      "name": "",
-      "group": "98db0617.e694d8",
-      "order": 0,
-      "width": 0,
-      "height": 0,
-      "gtype": "gage",
-      "title": "eyeGazeZ",
-      "label": "units",
-      "format": "{{value}}",
-      "min": "-2",
-      "max": "2",
-      "colors": [
-          "#00b500",
-          "#e6e600",
-          "#ca3838"
-      ],
-      "seg1": "",
-      "seg2": "",
-      "x": 730,
-      "y": 580,
-      "wires": []
-  },
-  {
-      "id": "d0bf0622.340968",
-      "type": "change",
-      "z": "46980af6.f32844",
-      "name": "eyeGazeZ",
-      "rules": [
-          {
-              "t": "set",
-              "p": "payload",
-              "pt": "msg",
-              "to": "payload.eyeGazeZ",
-              "tot": "msg"
-          }
-      ],
-      "action": "",
-      "property": "",
-      "from": "",
-      "to": "",
-      "reg": false,
-      "x": 470,
-      "y": 580,
-      "wires": [
-          [
-              "fef5bed2.9f4ed"
-          ]
-      ]
-  },
-  {
-      "id": "b84b712c.4b722",
-      "type": "csv",
-      "z": "46980af6.f32844",
-      "name": "",
-      "sep": ",",
-      "hdrin": "",
-      "hdrout": false,
-      "multi": "one",
-      "ret": "\\n",
-      "temp": "message,hololensTimestamp,hololensDeviceName,eyeGazeX,eyeGazeY,eyeGazeZ,cameraRotationX,cameraRotationY,cameraRotationZ,cameraPositionX,cameraPositionY,cameraPositionZ",
-      "skip": "0",
-      "strings": true,
-      "x": 450,
-      "y": 280,
-      "wires": [
-          [
-              "e540da26.ef21c8"
-          ]
-      ]
-  },
-  {
-      "id": "ea108105.df743",
-      "type": "comment",
-      "z": "46980af6.f32844",
-      "name": "CSV",
-      "info": "",
-      "x": 450,
-      "y": 240,
-      "wires": []
-  },
-  {
-      "id": "40089a25.667d94",
-      "type": "comment",
-      "z": "46980af6.f32844",
-      "name": "HoloLens モニタリング",
-      "info": "",
-      "x": 500,
-      "y": 460,
-      "wires": []
-  },
-  {
-      "id": "1d4c936f.8c6e0d",
-      "type": "change",
-      "z": "46980af6.f32844",
-      "name": "cameraRotationX",
-      "rules": [
-          {
-              "t": "set",
-              "p": "payload",
-              "pt": "msg",
-              "to": "payload.cameraRotationX",
-              "tot": "msg"
-          }
-      ],
-      "action": "",
-      "property": "",
-      "from": "",
-      "to": "",
-      "reg": false,
-      "x": 490,
-      "y": 620,
-      "wires": [
-          [
-              "9a88f6b0.00d528"
-          ]
-      ]
-  },
-  {
-      "id": "51075019.35e89",
-      "type": "file",
-      "z": "46980af6.f32844",
-      "name": "HoloLens csv保存",
-      "filename": "",
-      "appendNewline": false,
-      "createDir": false,
-      "overwriteFile": "false",
-      "encoding": "none",
-      "x": 1530,
-      "y": 280,
-      "wires": [
-          [
-              "8e76bc49.f4db3",
-              "412a5f00.4fd0a"
-          ]
-      ]
-  },
-  {
-      "id": "4f9cb408.5f05cc",
-      "type": "change",
-      "z": "46980af6.f32844",
-      "name": "cameraRotationY",
-      "rules": [
-          {
-              "t": "set",
-              "p": "payload",
-              "pt": "msg",
-              "to": "payload.cameraRotationY",
-              "tot": "msg"
-          }
-      ],
-      "action": "",
-      "property": "",
-      "from": "",
-      "to": "",
-      "reg": false,
-      "x": 490,
-      "y": 660,
-      "wires": [
-          [
-              "2b0d4667.8d62aa"
-          ]
-      ]
-  },
-  {
-      "id": "82d98b39.01e768",
-      "type": "change",
-      "z": "46980af6.f32844",
-      "name": "cameraRotationZ",
-      "rules": [
-          {
-              "t": "set",
-              "p": "payload",
-              "pt": "msg",
-              "to": "payload.cameraRotationZ",
-              "tot": "msg"
-          }
-      ],
-      "action": "",
-      "property": "",
-      "from": "",
-      "to": "",
-      "reg": false,
-      "x": 490,
-      "y": 700,
-      "wires": [
-          [
-              "83631866.4a7da8"
-          ]
-      ]
-  },
-  {
-      "id": "9a88f6b0.00d528",
-      "type": "ui_gauge",
-      "z": "46980af6.f32844",
-      "name": "",
-      "group": "b2db48ea.270ba8",
-      "order": 0,
-      "width": 0,
-      "height": 0,
-      "gtype": "gage",
-      "title": "cameraRotationX",
-      "label": "units",
-      "format": "{{value}}",
-      "min": "0",
-      "max": "360",
-      "colors": [
-          "#00b500",
-          "#e6e600",
-          "#ca3838"
-      ],
-      "seg1": "",
-      "seg2": "",
-      "x": 750,
-      "y": 620,
-      "wires": []
-  },
-  {
-      "id": "2b0d4667.8d62aa",
-      "type": "ui_gauge",
-      "z": "46980af6.f32844",
-      "name": "",
-      "group": "b2db48ea.270ba8",
-      "order": 0,
-      "width": 0,
-      "height": 0,
-      "gtype": "gage",
-      "title": "cameraRotationY",
-      "label": "units",
-      "format": "{{value}}",
-      "min": "0",
-      "max": "360",
-      "colors": [
-          "#00b500",
-          "#e6e600",
-          "#ca3838"
-      ],
-      "seg1": "",
-      "seg2": "",
-      "x": 750,
-      "y": 660,
-      "wires": []
-  },
-  {
-      "id": "83631866.4a7da8",
-      "type": "ui_gauge",
-      "z": "46980af6.f32844",
-      "name": "",
-      "group": "b2db48ea.270ba8",
-      "order": 0,
-      "width": 0,
-      "height": 0,
-      "gtype": "gage",
-      "title": "cameraRotationZ",
-      "label": "units",
-      "format": "{{value}}",
-      "min": "0",
-      "max": "360",
-      "colors": [
-          "#00b500",
-          "#e6e600",
-          "#ca3838"
-      ],
-      "seg1": "",
-      "seg2": "",
-      "x": 750,
-      "y": 700,
-      "wires": []
-  },
-  {
-      "id": "7cdceba9.e8e684",
-      "type": "change",
-      "z": "46980af6.f32844",
-      "name": "cameraPositionX",
-      "rules": [
-          {
-              "t": "set",
-              "p": "payload",
-              "pt": "msg",
-              "to": "payload.cameraPositionX",
-              "tot": "msg"
-          }
-      ],
-      "action": "",
-      "property": "",
-      "from": "",
-      "to": "",
-      "reg": false,
-      "x": 490,
-      "y": 740,
-      "wires": [
-          [
-              "24ac83b7.0172ec"
-          ]
-      ]
-  },
-  {
-      "id": "24ac83b7.0172ec",
-      "type": "ui_text",
-      "z": "46980af6.f32844",
-      "group": "4fe042cc.7051ec",
-      "order": 1,
-      "width": 0,
-      "height": 0,
-      "name": "",
-      "label": "cameraPositionX",
-      "format": "{{msg.payload}}",
-      "layout": "row-spread",
-      "x": 750,
-      "y": 740,
-      "wires": []
-  },
-  {
-      "id": "beb371cd.c7b85",
-      "type": "change",
-      "z": "46980af6.f32844",
-      "name": "cameraPositionY",
-      "rules": [
-          {
-              "t": "set",
-              "p": "payload",
-              "pt": "msg",
-              "to": "payload.cameraPositionY",
-              "tot": "msg"
-          }
-      ],
-      "action": "",
-      "property": "",
-      "from": "",
-      "to": "",
-      "reg": false,
-      "x": 490,
-      "y": 780,
-      "wires": [
-          [
-              "7d973dcf.936de4"
-          ]
-      ]
-  },
-  {
-      "id": "7d973dcf.936de4",
-      "type": "ui_text",
-      "z": "46980af6.f32844",
-      "group": "4fe042cc.7051ec",
-      "order": 2,
-      "width": 0,
-      "height": 0,
-      "name": "",
-      "label": "cameraPositionY",
-      "format": "{{msg.payload}}",
-      "layout": "row-spread",
-      "x": 750,
-      "y": 780,
-      "wires": []
-  },
-  {
-      "id": "9f2c9eb8.7239c",
-      "type": "ui_text",
-      "z": "46980af6.f32844",
-      "group": "4fe042cc.7051ec",
-      "order": 3,
-      "width": 0,
-      "height": 0,
-      "name": "",
-      "label": "cameraPositionZ",
-      "format": "{{msg.payload}}",
-      "layout": "row-spread",
-      "x": 750,
-      "y": 820,
-      "wires": []
-  },
-  {
-      "id": "7a783332.0d4a3c",
-      "type": "change",
-      "z": "46980af6.f32844",
-      "name": "cameraPositionZ",
-      "rules": [
-          {
-              "t": "set",
-              "p": "payload",
-              "pt": "msg",
-              "to": "payload.cameraPositionZ",
-              "tot": "msg"
-          }
-      ],
-      "action": "",
-      "property": "",
-      "from": "",
-      "to": "",
-      "reg": false,
-      "x": 490,
-      "y": 820,
-      "wires": [
-          [
-              "9f2c9eb8.7239c"
-          ]
-      ]
-  },
-  {
-      "id": "e1b18409.e904d8",
-      "type": "ui_text",
-      "z": "46980af6.f32844",
-      "group": "4fe042cc.7051ec",
-      "order": 4,
-      "width": 0,
-      "height": 0,
-      "name": "",
-      "label": "hololensTimestamp",
-      "format": "{{msg.payload}}",
-      "layout": "row-spread",
-      "x": 750,
-      "y": 860,
-      "wires": []
-  },
-  {
-      "id": "36b3895b.be33e6",
-      "type": "change",
-      "z": "46980af6.f32844",
-      "name": "hololensTimestamp",
-      "rules": [
-          {
-              "t": "set",
-              "p": "payload",
-              "pt": "msg",
-              "to": "payload.hololensTimestamp",
-              "tot": "msg"
-          }
-      ],
-      "action": "",
-      "property": "",
-      "from": "",
-      "to": "",
-      "reg": false,
-      "x": 490,
-      "y": 860,
-      "wires": [
-          [
-              "e1b18409.e904d8"
-          ]
-      ]
-  },
-  {
-      "id": "9c04c896.7157c8",
-      "type": "inject",
-      "z": "46980af6.f32844",
-      "name": "",
-      "repeat": "",
-      "crontab": "",
-      "once": false,
-      "onceDelay": 0.1,
-      "topic": "",
-      "payload": "{\"message\":\"start\"}",
-      "payloadType": "json",
-      "x": 170,
-      "y": 260,
-      "wires": [
-          [
-              "b84b712c.4b722",
-              "137726f8.3a7db9"
-          ]
-      ]
-  },
-  {
-      "id": "8e76bc49.f4db3",
-      "type": "debug",
-      "z": "46980af6.f32844",
-      "name": "",
-      "active": false,
-      "tosidebar": true,
-      "console": false,
-      "tostatus": false,
-      "complete": "false",
-      "x": 1830,
-      "y": 280,
-      "wires": []
-  },
-  {
-      "id": "c9fa5db7.46468",
-      "type": "tcp in",
-      "z": "46980af6.f32844",
-      "name": "",
-      "server": "server",
-      "host": "",
-      "port": "18802",
-      "datamode": "stream",
-      "datatype": "utf8",
-      "newline": "\\n",
-      "topic": "",
-      "base64": false,
-      "x": 120,
-      "y": 100,
-      "wires": [
-          [
-              "e51c6b42.721248"
-          ]
-      ]
-  },
-  {
-      "id": "8dcd8394.f4b5b",
-      "type": "debug",
-      "z": "46980af6.f32844",
-      "name": "",
-      "active": false,
-      "tosidebar": true,
-      "console": false,
-      "tostatus": false,
-      "complete": "false",
-      "x": 470,
-      "y": 100,
-      "wires": []
-  },
-  {
-      "id": "e51c6b42.721248",
-      "type": "json",
-      "z": "46980af6.f32844",
-      "name": "",
-      "property": "payload",
-      "action": "",
-      "pretty": false,
-      "x": 290,
-      "y": 100,
-      "wires": [
-          [
-              "8dcd8394.f4b5b",
-              "137726f8.3a7db9"
-          ]
-      ]
-  },
-  {
-      "id": "137726f8.3a7db9",
-      "type": "csv",
-      "z": "46980af6.f32844",
-      "name": "",
-      "sep": ",",
-      "hdrin": "",
-      "hdrout": false,
-      "multi": "one",
-      "ret": "\\n",
-      "temp": "message,timestampFinish,timestampStart,Pelvis,SpineNavel,SpineChest,Neck,ClavicleLeft, ShoulderLeft,ElbowLeft,WristLeft,HandLeft,HandTipLeft,ThumbLeft, ShoulderRight,ElbowRight,WristRight,HandRight,HandTipRight,ThumbRight, HipLeft,KneeLeft,AnkleLeft,FootLeft, HipRight,KneeRight,AnkleRight,FootRight, Head,Nose,EyeLeft,EarLeft,EyeRight,EarRight",
-      "skip": "0",
-      "strings": true,
-      "x": 450,
-      "y": 180,
-      "wires": [
-          [
-              "590c86e7.4afa78"
-          ]
-      ]
-  },
-  {
-      "id": "c4071e65.144aa",
-      "type": "comment",
-      "z": "46980af6.f32844",
-      "name": "CSV",
-      "info": "",
-      "x": 450,
-      "y": 140,
-      "wires": []
-  },
-  {
-      "id": "a38464ea.44eb78",
-      "type": "file",
-      "z": "46980af6.f32844",
-      "name": "Kinect csv 保存",
-      "filename": "",
-      "appendNewline": false,
-      "createDir": false,
-      "overwriteFile": "false",
-      "encoding": "none",
-      "x": 1520,
-      "y": 180,
-      "wires": [
-          [
-              "9c7d43f8.5f97e",
-              "df752339.ba727"
-          ]
-      ]
-  },
-  {
-      "id": "9c7d43f8.5f97e",
-      "type": "debug",
-      "z": "46980af6.f32844",
-      "name": "",
-      "active": false,
-      "tosidebar": true,
-      "console": false,
-      "tostatus": false,
-      "complete": "false",
-      "x": 1830,
-      "y": 180,
-      "wires": []
-  },
-  {
-      "id": "60ca5cbf.05fe94",
-      "type": "ui_switch",
-      "z": "46980af6.f32844",
-      "name": "",
-      "label": "データ記録",
-      "tooltip": "",
-      "group": "4fe042cc.7051ec",
-      "order": 5,
-      "width": 0,
-      "height": 0,
-      "passthru": true,
-      "decouple": "false",
-      "topic": "",
-      "style": "",
-      "onvalue": "true",
-      "onvalueType": "bool",
-      "onicon": "",
-      "oncolor": "",
-      "offvalue": "false",
-      "offvalueType": "bool",
-      "officon": "",
-      "offcolor": "",
-      "x": 350,
-      "y": 1000,
-      "wires": [
-          [
-              "af261695.7a5628"
-          ]
-      ]
-  },
-  {
-      "id": "857886f4.1a5768",
-      "type": "switch",
-      "z": "46980af6.f32844",
-      "name": "recordSwitch",
-      "property": "recordSwitch",
-      "propertyType": "global",
-      "rules": [
-          {
-              "t": "true"
-          },
-          {
-              "t": "false"
-          }
-      ],
-      "checkall": "true",
-      "repair": false,
-      "outputs": 2,
-      "x": 730,
-      "y": 1000,
-      "wires": [
-          [
-              "f40997b2.104348"
-          ],
-          [
-              "a2509402.bd4188"
-          ]
-      ]
-  },
-  {
-      "id": "af261695.7a5628",
-      "type": "change",
-      "z": "46980af6.f32844",
-      "name": "global.recordSwitch",
-      "rules": [
-          {
-              "t": "set",
-              "p": "recordSwitch",
-              "pt": "global",
-              "to": "payload",
-              "tot": "msg"
-          }
-      ],
-      "action": "",
-      "property": "",
-      "from": "",
-      "to": "",
-      "reg": false,
-      "x": 530,
-      "y": 1000,
-      "wires": [
-          [
-              "857886f4.1a5768"
-          ]
-      ]
-  },
-  {
-      "id": "590c86e7.4afa78",
-      "type": "switch",
-      "z": "46980af6.f32844",
-      "name": "global.recordSwitch true",
-      "property": "recordSwitch",
-      "propertyType": "global",
-      "rules": [
-          {
-              "t": "true"
-          }
-      ],
-      "checkall": "true",
-      "repair": false,
-      "outputs": 1,
-      "x": 650,
-      "y": 180,
-      "wires": [
-          [
-              "17ab4c54.811a14"
-          ]
-      ]
-  },
-  {
-      "id": "e540da26.ef21c8",
-      "type": "switch",
-      "z": "46980af6.f32844",
-      "name": "global.recordSwitch true",
-      "property": "recordSwitch",
-      "propertyType": "global",
-      "rules": [
-          {
-              "t": "true"
-          }
-      ],
-      "checkall": "true",
-      "repair": false,
-      "outputs": 1,
-      "x": 650,
-      "y": 280,
-      "wires": [
-          [
-              "72d53295.91438c"
-          ]
-      ]
-  },
-  {
-      "id": "fced5c81.45cf5",
-      "type": "inject",
-      "z": "46980af6.f32844",
-      "name": "",
-      "repeat": "",
-      "crontab": "",
-      "once": true,
-      "onceDelay": 0.1,
-      "topic": "",
-      "payload": "false",
-      "payloadType": "bool",
-      "x": 190,
-      "y": 1000,
-      "wires": [
-          [
-              "60ca5cbf.05fe94"
-          ]
-      ]
-  },
-  {
-      "id": "bf9e1d4c.a78fe",
-      "type": "link in",
-      "z": "46980af6.f32844",
-      "name": "HoloLens 保存",
-      "links": [
-          "57769b25.d43b44"
-      ],
-      "x": 775,
-      "y": 320,
-      "wires": [
-          [
-              "72d53295.91438c"
-          ]
-      ]
-  },
-  {
-      "id": "7a7d3c72.a23b14",
-      "type": "link in",
-      "z": "46980af6.f32844",
-      "name": "Kinect 保存",
-      "links": [
-          "57769b25.d43b44"
-      ],
-      "x": 775,
-      "y": 220,
-      "wires": [
-          [
-              "17ab4c54.811a14"
-          ]
-      ]
-  },
-  {
-      "id": "57769b25.d43b44",
-      "type": "link out",
-      "z": "46980af6.f32844",
-      "name": "CSV保存へ",
-      "links": [
-          "bf9e1d4c.a78fe",
-          "7a7d3c72.a23b14"
-      ],
-      "x": 1370,
-      "y": 960,
-      "wires": [],
-      "l": true
-  },
-  {
-      "id": "f40997b2.104348",
-      "type": "change",
-      "z": "46980af6.f32844",
-      "name": "ON メッセージ",
-      "rules": [
-          {
-              "t": "set",
-              "p": "payload",
-              "pt": "msg",
-              "to": "{\t   \"message\":\"record start -> \" & $fromMillis($millis(),'[Y0001]/[M01]/[D01] [H01]:[m01]:[s01] [z]','+0900'),\t   \"timestamp\":$millis()\t}",
-              "tot": "jsonata"
-          }
-      ],
-      "action": "",
-      "property": "",
-      "from": "",
-      "to": "",
-      "reg": false,
-      "x": 960,
-      "y": 960,
-      "wires": [
-          [
-              "76507840.9c5168"
-          ]
-      ]
-  },
-  {
-      "id": "a2509402.bd4188",
-      "type": "change",
-      "z": "46980af6.f32844",
-      "name": "OFF メッセージ",
-      "rules": [
-          {
-              "t": "set",
-              "p": "payload",
-              "pt": "msg",
-              "to": "{\t   \"message\":\"record end -> \" & $fromMillis($millis(),'[Y0001]/[M01]/[D01] [H01]:[m01]:[s01] [z]','+0900'),\t   \"timestamp\":$millis()\t}",
-              "tot": "jsonata"
-          }
-      ],
-      "action": "",
-      "property": "",
-      "from": "",
-      "to": "",
-      "reg": false,
-      "x": 960,
-      "y": 1020,
-      "wires": [
-          [
-              "76507840.9c5168"
-          ]
-      ]
-  },
-  {
-      "id": "76507840.9c5168",
-      "type": "csv",
-      "z": "46980af6.f32844",
-      "name": "",
-      "sep": ",",
-      "hdrin": "",
-      "hdrout": false,
-      "multi": "one",
-      "ret": "\\n",
-      "temp": "message,timestamp",
-      "skip": "0",
-      "strings": true,
-      "x": 1190,
-      "y": 960,
-      "wires": [
-          [
-              "57769b25.d43b44"
-          ]
-      ]
-  },
-  {
-      "id": "7d460753.0fbc08",
-      "type": "comment",
-      "z": "46980af6.f32844",
-      "name": "データ記録開始スイッチ",
-      "info": "",
-      "x": 230,
-      "y": 960,
-      "wires": []
-  },
-  {
-      "id": "1f840a2a.055d46",
-      "type": "comment",
-      "z": "46980af6.f32844",
-      "name": "HoloLens TCP 記録",
-      "info": "",
-      "x": 150,
-      "y": 320,
-      "wires": []
-  },
-  {
-      "id": "b5468baf.5428d8",
-      "type": "comment",
-      "z": "46980af6.f32844",
-      "name": "Azure Kinect TCP 記録",
-      "info": "",
-      "x": 160,
-      "y": 60,
-      "wires": []
-  },
-  {
-      "id": "55c724ab.8893ac",
-      "type": "comment",
-      "z": "46980af6.f32844",
-      "name": "HoloLens 記録ボタン",
-      "info": "",
-      "x": 220,
-      "y": 1080,
-      "wires": []
-  },
-  {
-      "id": "93562ce5.a722c",
-      "type": "inject",
-      "z": "46980af6.f32844",
-      "name": "",
-      "repeat": "",
-      "crontab": "",
-      "once": true,
-      "onceDelay": 0.1,
-      "topic": "",
-      "payload": "true",
-      "payloadType": "bool",
-      "x": 190,
-      "y": 1120,
-      "wires": [
-          [
-              "62f0f749.6047d8"
-          ]
-      ]
-  },
-  {
-      "id": "62f0f749.6047d8",
-      "type": "ui_switch",
-      "z": "46980af6.f32844",
-      "name": "",
-      "label": "HoloLens 機能",
-      "tooltip": "",
-      "group": "3c233d82.f46f12",
-      "order": 2,
-      "width": 6,
-      "height": 1,
-      "passthru": true,
-      "decouple": "false",
-      "topic": "",
-      "style": "",
-      "onvalue": "true",
-      "onvalueType": "bool",
-      "onicon": "",
-      "oncolor": "",
-      "offvalue": "false",
-      "offvalueType": "bool",
-      "officon": "",
-      "offcolor": "",
-      "x": 360,
-      "y": 1120,
-      "wires": [
-          [
-              "fc3ec41b.349028"
-          ]
-      ]
-  },
-  {
-      "id": "fc3ec41b.349028",
-      "type": "change",
-      "z": "46980af6.f32844",
-      "name": "global.activeHoloLens",
-      "rules": [
-          {
-              "t": "set",
-              "p": "activeHoloLens",
-              "pt": "global",
-              "to": "payload",
-              "tot": "msg"
-          }
-      ],
-      "action": "",
-      "property": "",
-      "from": "",
-      "to": "",
-      "reg": false,
-      "x": 600,
-      "y": 1120,
-      "wires": [
-          []
-      ]
-  },
-  {
-      "id": "29e59d6f.2ddd22",
-      "type": "comment",
-      "z": "46980af6.f32844",
-      "name": "Kinect 記録ボタン",
-      "info": "",
-      "x": 210,
-      "y": 1180,
-      "wires": []
-  },
-  {
-      "id": "96d12286.7d51",
-      "type": "inject",
-      "z": "46980af6.f32844",
-      "name": "",
-      "repeat": "",
-      "crontab": "",
-      "once": true,
-      "onceDelay": 0.1,
-      "topic": "",
-      "payload": "false",
-      "payloadType": "bool",
-      "x": 190,
-      "y": 1220,
-      "wires": [
-          [
-              "74e52198.2e9e6"
-          ]
-      ]
-  },
-  {
-      "id": "74e52198.2e9e6",
-      "type": "ui_switch",
-      "z": "46980af6.f32844",
-      "name": "",
-      "label": "Kinect 機能",
-      "tooltip": "",
-      "group": "3c233d82.f46f12",
-      "order": 5,
-      "width": 6,
-      "height": 1,
-      "passthru": true,
-      "decouple": "false",
-      "topic": "",
-      "style": "",
-      "onvalue": "true",
-      "onvalueType": "bool",
-      "onicon": "",
-      "oncolor": "",
-      "offvalue": "false",
-      "offvalueType": "bool",
-      "officon": "",
-      "offcolor": "",
-      "x": 350,
-      "y": 1220,
-      "wires": [
-          [
-              "4cb2035d.c0308c"
-          ]
-      ]
-  },
-  {
-      "id": "4cb2035d.c0308c",
-      "type": "change",
-      "z": "46980af6.f32844",
-      "name": "global.activeKinect",
-      "rules": [
-          {
-              "t": "set",
-              "p": "activeKinect",
-              "pt": "global",
-              "to": "payload",
-              "tot": "msg"
-          }
-      ],
-      "action": "",
-      "property": "",
-      "from": "",
-      "to": "",
-      "reg": false,
-      "x": 590,
-      "y": 1220,
-      "wires": [
-          []
-      ]
-  },
-  {
-      "id": "72d53295.91438c",
-      "type": "switch",
-      "z": "46980af6.f32844",
-      "name": "global.activeHoloLens true",
-      "property": "activeHoloLens",
-      "propertyType": "global",
-      "rules": [
-          {
-              "t": "true"
-          }
-      ],
-      "checkall": "true",
-      "repair": false,
-      "outputs": 1,
-      "x": 940,
-      "y": 280,
-      "wires": [
-          [
-              "b6232edf.df795"
-          ]
-      ]
-  },
-  {
-      "id": "17ab4c54.811a14",
-      "type": "switch",
-      "z": "46980af6.f32844",
-      "name": "global.activeKinect true",
-      "property": "activeKinect",
-      "propertyType": "global",
-      "rules": [
-          {
-              "t": "true"
-          }
-      ],
-      "checkall": "true",
-      "repair": false,
-      "outputs": 1,
-      "x": 930,
-      "y": 180,
-      "wires": [
-          [
-              "cf8da0ad.c8c5a"
-          ]
-      ]
-  },
-  {
-      "id": "7dbc9432.07f3fc",
-      "type": "comment",
-      "z": "46980af6.f32844",
-      "name": "ダミーデータ HoloLens",
-      "info": "",
-      "x": 180,
-      "y": 1320,
-      "wires": []
-  },
-  {
-      "id": "3e6358a9.ab0858",
-      "type": "inject",
-      "z": "46980af6.f32844",
-      "name": "",
-      "props": [
-          {
-              "p": "payload"
-          },
-          {
-              "p": "topic",
-              "vt": "str"
-          }
-      ],
-      "repeat": "",
-      "crontab": "",
-      "once": false,
-      "onceDelay": 0.1,
-      "topic": "",
-      "payload": "",
-      "payloadType": "date",
-      "x": 180,
-      "y": 1360,
-      "wires": [
-          [
-              "9c5a35bf.6f5748"
-          ]
-      ]
-  },
-  {
-      "id": "9c5a35bf.6f5748",
-      "type": "change",
-      "z": "46980af6.f32844",
-      "name": "ダミー メッセージ",
-      "rules": [
-          {
-              "t": "set",
-              "p": "payload",
-              "pt": "msg",
-              "to": "{\t   \"message\":\"dummy\" & $fromMillis($millis(),'[Y0001]/[M01]/[D01] [H01]:[m01]:[s01] [z]','+0900'),\t   \"timestamp\":$millis()\t}",
-              "tot": "jsonata"
-          }
-      ],
-      "action": "",
-      "property": "",
-      "from": "",
-      "to": "",
-      "reg": false,
-      "x": 430,
-      "y": 1360,
-      "wires": [
-          [
-              "ee86dc99.913a8"
-          ]
-      ]
-  },
-  {
-      "id": "ee86dc99.913a8",
-      "type": "csv",
-      "z": "46980af6.f32844",
-      "name": "",
-      "sep": ",",
-      "hdrin": "",
-      "hdrout": false,
-      "multi": "one",
-      "ret": "\\n",
-      "temp": "message,timestamp",
-      "skip": "0",
-      "strings": true,
-      "x": 650,
-      "y": 1360,
-      "wires": [
-          [
-              "95e2816f.ea64d"
-          ]
-      ]
-  },
-  {
-      "id": "cca46f7d.24d9a",
-      "type": "link in",
-      "z": "46980af6.f32844",
-      "name": "HoloLens ダミー",
-      "links": [
-          "95e2816f.ea64d"
-      ],
-      "x": 515,
-      "y": 320,
-      "wires": [
-          [
-              "e540da26.ef21c8"
-          ]
-      ]
-  },
-  {
-      "id": "95e2816f.ea64d",
-      "type": "link out",
-      "z": "46980af6.f32844",
-      "name": "HoloLens ダミー out",
-      "links": [
-          "cca46f7d.24d9a"
-      ],
-      "x": 795,
-      "y": 1360,
-      "wires": []
-  },
-  {
-      "id": "e578788d.376248",
-      "type": "comment",
-      "z": "46980af6.f32844",
-      "name": "HoloLens 記録 CSV ファイルパス",
-      "info": "",
-      "x": 920,
-      "y": 1080,
-      "wires": []
-  },
-  {
-      "id": "c58ea098.20d89",
-      "type": "inject",
-      "z": "46980af6.f32844",
-      "name": "デフォルトパス hololens-record.csv",
-      "props": [
-          {
-              "p": "payload"
-          },
-          {
-              "p": "topic",
-              "vt": "str"
-          }
-      ],
-      "repeat": "",
-      "crontab": "",
-      "once": true,
-      "onceDelay": 0.1,
-      "topic": "",
-      "payload": "C:\\Users\\tnkse\\Desktop\\hololens-record.csv",
-      "payloadType": "str",
-      "x": 930,
-      "y": 1120,
-      "wires": [
-          [
-              "2a264afc.885236"
-          ]
-      ]
-  },
-  {
-      "id": "cf8da0ad.c8c5a",
-      "type": "change",
-      "z": "46980af6.f32844",
-      "name": "ファイル名設定 filepathKinect",
-      "rules": [
-          {
-              "t": "set",
-              "p": "filename",
-              "pt": "msg",
-              "to": "filepathKinect",
-              "tot": "global"
-          }
-      ],
-      "action": "",
-      "property": "",
-      "from": "",
-      "to": "",
-      "reg": false,
-      "x": 1230,
-      "y": 180,
-      "wires": [
-          [
-              "a38464ea.44eb78"
-          ]
-      ]
-  },
-  {
-      "id": "b6232edf.df795",
-      "type": "change",
-      "z": "46980af6.f32844",
-      "name": "ファイル名設定 filepathHoloLens",
-      "rules": [
-          {
-              "t": "set",
-              "p": "filename",
-              "pt": "msg",
-              "to": "filepathHoloLens",
-              "tot": "global"
-          }
-      ],
-      "action": "",
-      "property": "",
-      "from": "",
-      "to": "",
-      "reg": false,
-      "x": 1240,
-      "y": 280,
-      "wires": [
-          [
-              "51075019.35e89"
-          ]
-      ]
-  },
-  {
-      "id": "2a264afc.885236",
-      "type": "ui_text_input",
-      "z": "46980af6.f32844",
-      "name": "",
-      "label": "HoloLens 記録 CSV ファイルパス",
-      "tooltip": "",
-      "group": "3c233d82.f46f12",
-      "order": 1,
-      "width": 0,
-      "height": 0,
-      "passthru": true,
-      "mode": "text",
-      "delay": 300,
-      "topic": "",
-      "x": 1280,
-      "y": 1120,
-      "wires": [
-          [
-              "5a33ca78.707784"
-          ]
-      ]
-  },
-  {
-      "id": "f5af3146.8ff4a",
-      "type": "comment",
-      "z": "46980af6.f32844",
-      "name": "Kinect 記録 CSV ファイルパス",
-      "info": "",
-      "x": 910,
-      "y": 1180,
-      "wires": []
-  },
-  {
-      "id": "5fbcf098.24398",
-      "type": "inject",
-      "z": "46980af6.f32844",
-      "name": "デフォルトパス kinect-record.csv",
-      "props": [
-          {
-              "p": "payload"
-          },
-          {
-              "p": "topic",
-              "vt": "str"
-          }
-      ],
-      "repeat": "",
-      "crontab": "",
-      "once": true,
-      "onceDelay": 0.1,
-      "topic": "",
-      "payload": "C:\\Users\\tnkse\\Desktop\\kinect-record.csv",
-      "payloadType": "str",
-      "x": 920,
-      "y": 1220,
-      "wires": [
-          [
-              "d77813b4.9498"
-          ]
-      ]
-  },
-  {
-      "id": "d77813b4.9498",
-      "type": "ui_text_input",
-      "z": "46980af6.f32844",
-      "name": "",
-      "label": "Kinect 記録 CSV ファイルパス",
-      "tooltip": "",
-      "group": "3c233d82.f46f12",
-      "order": 4,
-      "width": 0,
-      "height": 0,
-      "passthru": true,
-      "mode": "text",
-      "delay": 300,
-      "topic": "",
-      "x": 1270,
-      "y": 1220,
-      "wires": [
-          [
-              "e80346cb.bf9588"
-          ]
-      ]
-  },
-  {
-      "id": "5a33ca78.707784",
-      "type": "change",
-      "z": "46980af6.f32844",
-      "name": "global.filepathHoloLens",
-      "rules": [
-          {
-              "t": "set",
-              "p": "filepathHoloLens",
-              "pt": "global",
-              "to": "payload",
-              "tot": "msg"
-          }
-      ],
-      "action": "",
-      "property": "",
-      "from": "",
-      "to": "",
-      "reg": false,
-      "x": 1610,
-      "y": 1120,
-      "wires": [
-          []
-      ]
-  },
-  {
-      "id": "e80346cb.bf9588",
-      "type": "change",
-      "z": "46980af6.f32844",
-      "name": "global.filepathKinect",
-      "rules": [
-          {
-              "t": "set",
-              "p": "filepathKinect",
-              "pt": "global",
-              "to": "payload",
-              "tot": "msg"
-          }
-      ],
-      "action": "",
-      "property": "",
-      "from": "",
-      "to": "",
-      "reg": false,
-      "x": 1600,
-      "y": 1220,
-      "wires": [
-          []
-      ]
-  },
-  {
-      "id": "412a5f00.4fd0a",
-      "type": "ui_text",
-      "z": "46980af6.f32844",
-      "group": "4fe042cc.7051ec",
-      "order": 5,
-      "width": "6",
-      "height": "3",
-      "name": "",
-      "label": "[HoloLens CSV]",
-      "format": "{{msg.payload}}",
-      "layout": "col-center",
-      "x": 1840,
-      "y": 340,
-      "wires": []
-  },
-  {
-      "id": "df752339.ba727",
-      "type": "ui_text",
-      "z": "46980af6.f32844",
-      "group": "4fe042cc.7051ec",
-      "order": 5,
-      "width": "6",
-      "height": "3",
-      "name": "",
-      "label": "[Kinect CSV]",
-      "format": "{{msg.payload}}",
-      "layout": "col-center",
-      "x": 1830,
-      "y": 220,
-      "wires": []
-  },
-  {
-      "id": "98db0617.e694d8",
-      "type": "ui_group",
-      "z": "",
-      "name": "列3",
-      "tab": "8e118f7.3bdb87",
-      "order": 3,
-      "disp": false,
-      "width": "6",
-      "collapse": false
-  },
-  {
-      "id": "b2db48ea.270ba8",
-      "type": "ui_group",
-      "z": "",
-      "name": "列2",
-      "tab": "8e118f7.3bdb87",
-      "order": 2,
-      "disp": false,
-      "width": "6",
-      "collapse": false
-  },
-  {
-      "id": "4fe042cc.7051ec",
-      "type": "ui_group",
-      "z": "",
-      "name": "列1",
-      "tab": "8e118f7.3bdb87",
-      "order": 1,
-      "disp": false,
-      "width": "6",
-      "collapse": false
-  },
-  {
-      "id": "3c233d82.f46f12",
-      "type": "ui_group",
-      "z": "",
-      "name": "管理",
-      "tab": "65c98ea2.b199d",
-      "order": 1,
-      "disp": false,
-      "width": "12",
-      "collapse": false
-  },
-  {
-      "id": "8e118f7.3bdb87",
-      "type": "ui_tab",
-      "z": "",
-      "name": "HoloLens",
-      "icon": "dashboard",
-      "order": 1,
-      "disabled": false,
-      "hidden": false
-  },
-  {
-      "id": "65c98ea2.b199d",
-      "type": "ui_tab",
-      "z": "",
-      "name": "管理画面",
-      "icon": "dashboard",
-      "order": 2,
-      "disabled": false,
-      "hidden": false
-  }
+    {
+        "id": "74e52198.2e9e6",
+        "type": "ui_switch",
+        "z": "46980af6.f32844",
+        "name": "",
+        "label": "Kinect 機能",
+        "tooltip": "",
+        "group": "3c233d82.f46f12",
+        "order": 5,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 350,
+        "y": 1360,
+        "wires": [
+            [
+                "4cb2035d.c0308c"
+            ]
+        ]
+    },
+    {
+        "id": "37a688b5.e4aa48",
+        "type": "tcp in",
+        "z": "46980af6.f32844",
+        "name": "",
+        "server": "server",
+        "host": "",
+        "port": "18801",
+        "datamode": "stream",
+        "datatype": "utf8",
+        "newline": "",
+        "topic": "",
+        "base64": false,
+        "x": 120,
+        "y": 360,
+        "wires": [
+            [
+                "ddacd7cf.9730b8"
+            ]
+        ]
+    },
+    {
+        "id": "db02cc0.b056f38",
+        "type": "debug",
+        "z": "46980af6.f32844",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 470,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "ddacd7cf.9730b8",
+        "type": "json",
+        "z": "46980af6.f32844",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 270,
+        "y": 360,
+        "wires": [
+            [
+                "db02cc0.b056f38",
+                "823f758a.a52f48",
+                "a8f26b60.f15598",
+                "d0bf0622.340968",
+                "b84b712c.4b722",
+                "1d4c936f.8c6e0d",
+                "4f9cb408.5f05cc",
+                "82d98b39.01e768",
+                "7cdceba9.e8e684",
+                "beb371cd.c7b85",
+                "7a783332.0d4a3c",
+                "36b3895b.be33e6"
+            ]
+        ]
+    },
+    {
+        "id": "9a803695.9ecb78",
+        "type": "ui_gauge",
+        "z": "46980af6.f32844",
+        "name": "",
+        "group": "98db0617.e694d8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "eyeGazeX",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "-2",
+        "max": "2",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 730,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "823f758a.a52f48",
+        "type": "change",
+        "z": "46980af6.f32844",
+        "name": "eyeGazeX",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.eyeGazeX",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 500,
+        "wires": [
+            [
+                "9a803695.9ecb78"
+            ]
+        ]
+    },
+    {
+        "id": "a8f26b60.f15598",
+        "type": "change",
+        "z": "46980af6.f32844",
+        "name": "eyeGazeY",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.eyeGazeY",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 540,
+        "wires": [
+            [
+                "3f48bc2b.cc2654"
+            ]
+        ]
+    },
+    {
+        "id": "3f48bc2b.cc2654",
+        "type": "ui_gauge",
+        "z": "46980af6.f32844",
+        "name": "",
+        "group": "98db0617.e694d8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "eyeGazeY",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "-2",
+        "max": "2",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 730,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "fef5bed2.9f4ed",
+        "type": "ui_gauge",
+        "z": "46980af6.f32844",
+        "name": "",
+        "group": "98db0617.e694d8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "eyeGazeZ",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "-2",
+        "max": "2",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 730,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "d0bf0622.340968",
+        "type": "change",
+        "z": "46980af6.f32844",
+        "name": "eyeGazeZ",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.eyeGazeZ",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 580,
+        "wires": [
+            [
+                "fef5bed2.9f4ed"
+            ]
+        ]
+    },
+    {
+        "id": "b84b712c.4b722",
+        "type": "csv",
+        "z": "46980af6.f32844",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": false,
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "message,hololensTimestamp,hololensDeviceName,eyeGazeX,eyeGazeY,eyeGazeZ,cameraRotationX,cameraRotationY,cameraRotationZ,cameraPositionX,cameraPositionY,cameraPositionZ",
+        "skip": "0",
+        "strings": true,
+        "x": 450,
+        "y": 280,
+        "wires": [
+            [
+                "e540da26.ef21c8"
+            ]
+        ]
+    },
+    {
+        "id": "ea108105.df743",
+        "type": "comment",
+        "z": "46980af6.f32844",
+        "name": "CSV",
+        "info": "",
+        "x": 450,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "40089a25.667d94",
+        "type": "comment",
+        "z": "46980af6.f32844",
+        "name": "HoloLens モニタリング",
+        "info": "",
+        "x": 500,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "1d4c936f.8c6e0d",
+        "type": "change",
+        "z": "46980af6.f32844",
+        "name": "cameraRotationX",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.cameraRotationX",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 620,
+        "wires": [
+            [
+                "9a88f6b0.00d528"
+            ]
+        ]
+    },
+    {
+        "id": "51075019.35e89",
+        "type": "file",
+        "z": "46980af6.f32844",
+        "name": "HoloLens csv保存",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1530,
+        "y": 280,
+        "wires": [
+            [
+                "8e76bc49.f4db3",
+                "412a5f00.4fd0a"
+            ]
+        ]
+    },
+    {
+        "id": "4f9cb408.5f05cc",
+        "type": "change",
+        "z": "46980af6.f32844",
+        "name": "cameraRotationY",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.cameraRotationY",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 660,
+        "wires": [
+            [
+                "2b0d4667.8d62aa"
+            ]
+        ]
+    },
+    {
+        "id": "82d98b39.01e768",
+        "type": "change",
+        "z": "46980af6.f32844",
+        "name": "cameraRotationZ",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.cameraRotationZ",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 700,
+        "wires": [
+            [
+                "83631866.4a7da8"
+            ]
+        ]
+    },
+    {
+        "id": "9a88f6b0.00d528",
+        "type": "ui_gauge",
+        "z": "46980af6.f32844",
+        "name": "",
+        "group": "b2db48ea.270ba8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "cameraRotationX",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "360",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 750,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "2b0d4667.8d62aa",
+        "type": "ui_gauge",
+        "z": "46980af6.f32844",
+        "name": "",
+        "group": "b2db48ea.270ba8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "cameraRotationY",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "360",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 750,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "83631866.4a7da8",
+        "type": "ui_gauge",
+        "z": "46980af6.f32844",
+        "name": "",
+        "group": "b2db48ea.270ba8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "cameraRotationZ",
+        "label": "units",
+        "format": "{{value}}",
+        "min": "0",
+        "max": "360",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 750,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "7cdceba9.e8e684",
+        "type": "change",
+        "z": "46980af6.f32844",
+        "name": "cameraPositionX",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.cameraPositionX",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 740,
+        "wires": [
+            [
+                "24ac83b7.0172ec"
+            ]
+        ]
+    },
+    {
+        "id": "24ac83b7.0172ec",
+        "type": "ui_text",
+        "z": "46980af6.f32844",
+        "group": "4fe042cc.7051ec",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "cameraPositionX",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 750,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "beb371cd.c7b85",
+        "type": "change",
+        "z": "46980af6.f32844",
+        "name": "cameraPositionY",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.cameraPositionY",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 780,
+        "wires": [
+            [
+                "7d973dcf.936de4"
+            ]
+        ]
+    },
+    {
+        "id": "7d973dcf.936de4",
+        "type": "ui_text",
+        "z": "46980af6.f32844",
+        "group": "4fe042cc.7051ec",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "cameraPositionY",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 750,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "9f2c9eb8.7239c",
+        "type": "ui_text",
+        "z": "46980af6.f32844",
+        "group": "4fe042cc.7051ec",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "cameraPositionZ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 750,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "7a783332.0d4a3c",
+        "type": "change",
+        "z": "46980af6.f32844",
+        "name": "cameraPositionZ",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.cameraPositionZ",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 820,
+        "wires": [
+            [
+                "9f2c9eb8.7239c"
+            ]
+        ]
+    },
+    {
+        "id": "e1b18409.e904d8",
+        "type": "ui_text",
+        "z": "46980af6.f32844",
+        "group": "4fe042cc.7051ec",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "hololensTimestamp",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 750,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "36b3895b.be33e6",
+        "type": "change",
+        "z": "46980af6.f32844",
+        "name": "hololensTimestamp",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.hololensTimestamp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 490,
+        "y": 860,
+        "wires": [
+            [
+                "e1b18409.e904d8"
+            ]
+        ]
+    },
+    {
+        "id": "9c04c896.7157c8",
+        "type": "inject",
+        "z": "46980af6.f32844",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"message\":\"start\"}",
+        "payloadType": "json",
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "b84b712c.4b722",
+                "137726f8.3a7db9"
+            ]
+        ]
+    },
+    {
+        "id": "8e76bc49.f4db3",
+        "type": "debug",
+        "z": "46980af6.f32844",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1830,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "c9fa5db7.46468",
+        "type": "tcp in",
+        "z": "46980af6.f32844",
+        "name": "",
+        "server": "server",
+        "host": "",
+        "port": "18802",
+        "datamode": "stream",
+        "datatype": "utf8",
+        "newline": "\\n",
+        "topic": "",
+        "base64": false,
+        "x": 120,
+        "y": 100,
+        "wires": [
+            [
+                "e51c6b42.721248"
+            ]
+        ]
+    },
+    {
+        "id": "8dcd8394.f4b5b",
+        "type": "debug",
+        "z": "46980af6.f32844",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 470,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "e51c6b42.721248",
+        "type": "json",
+        "z": "46980af6.f32844",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 290,
+        "y": 100,
+        "wires": [
+            [
+                "8dcd8394.f4b5b",
+                "137726f8.3a7db9"
+            ]
+        ]
+    },
+    {
+        "id": "137726f8.3a7db9",
+        "type": "csv",
+        "z": "46980af6.f32844",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": false,
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "message,timestampFinish,timestampStart,Pelvis,SpineNavel,SpineChest,Neck,ClavicleLeft, ShoulderLeft,ElbowLeft,WristLeft,HandLeft,HandTipLeft,ThumbLeft, ShoulderRight,ElbowRight,WristRight,HandRight,HandTipRight,ThumbRight, HipLeft,KneeLeft,AnkleLeft,FootLeft, HipRight,KneeRight,AnkleRight,FootRight, Head,Nose,EyeLeft,EarLeft,EyeRight,EarRight",
+        "skip": "0",
+        "strings": true,
+        "x": 450,
+        "y": 180,
+        "wires": [
+            [
+                "590c86e7.4afa78"
+            ]
+        ]
+    },
+    {
+        "id": "c4071e65.144aa",
+        "type": "comment",
+        "z": "46980af6.f32844",
+        "name": "CSV",
+        "info": "",
+        "x": 450,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "a38464ea.44eb78",
+        "type": "file",
+        "z": "46980af6.f32844",
+        "name": "Kinect csv 保存",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1520,
+        "y": 180,
+        "wires": [
+            [
+                "9c7d43f8.5f97e",
+                "df752339.ba727"
+            ]
+        ]
+    },
+    {
+        "id": "9c7d43f8.5f97e",
+        "type": "debug",
+        "z": "46980af6.f32844",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1830,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "60ca5cbf.05fe94",
+        "type": "ui_switch",
+        "z": "46980af6.f32844",
+        "name": "",
+        "label": "データ記録",
+        "tooltip": "",
+        "group": "4fe042cc.7051ec",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 390,
+        "y": 1140,
+        "wires": [
+            [
+                "117b4565.38b52b"
+            ]
+        ]
+    },
+    {
+        "id": "857886f4.1a5768",
+        "type": "switch",
+        "z": "46980af6.f32844",
+        "name": "recordSwitch",
+        "property": "recordSwitch",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1110,
+        "y": 1160,
+        "wires": [
+            [
+                "f40997b2.104348"
+            ],
+            [
+                "a2509402.bd4188"
+            ]
+        ]
+    },
+    {
+        "id": "af261695.7a5628",
+        "type": "change",
+        "z": "46980af6.f32844",
+        "name": "global.recordSwitch",
+        "rules": [
+            {
+                "t": "set",
+                "p": "recordSwitch",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 1160,
+        "wires": [
+            [
+                "857886f4.1a5768"
+            ]
+        ]
+    },
+    {
+        "id": "590c86e7.4afa78",
+        "type": "switch",
+        "z": "46980af6.f32844",
+        "name": "global.recordSwitch true",
+        "property": "recordSwitch",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 650,
+        "y": 180,
+        "wires": [
+            [
+                "17ab4c54.811a14"
+            ]
+        ]
+    },
+    {
+        "id": "e540da26.ef21c8",
+        "type": "switch",
+        "z": "46980af6.f32844",
+        "name": "global.recordSwitch true",
+        "property": "recordSwitch",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 650,
+        "y": 280,
+        "wires": [
+            [
+                "72d53295.91438c"
+            ]
+        ]
+    },
+    {
+        "id": "fced5c81.45cf5",
+        "type": "inject",
+        "z": "46980af6.f32844",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "switch-first",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 200,
+        "y": 1140,
+        "wires": [
+            [
+                "60ca5cbf.05fe94",
+                "f92808fd.ab42d8"
+            ]
+        ]
+    },
+    {
+        "id": "bf9e1d4c.a78fe",
+        "type": "link in",
+        "z": "46980af6.f32844",
+        "name": "HoloLens 保存",
+        "links": [
+            "57769b25.d43b44"
+        ],
+        "x": 775,
+        "y": 320,
+        "wires": [
+            [
+                "72d53295.91438c"
+            ]
+        ]
+    },
+    {
+        "id": "7a7d3c72.a23b14",
+        "type": "link in",
+        "z": "46980af6.f32844",
+        "name": "Kinect 保存",
+        "links": [
+            "57769b25.d43b44"
+        ],
+        "x": 775,
+        "y": 220,
+        "wires": [
+            [
+                "17ab4c54.811a14"
+            ]
+        ]
+    },
+    {
+        "id": "57769b25.d43b44",
+        "type": "link out",
+        "z": "46980af6.f32844",
+        "name": "CSV保存へ",
+        "links": [
+            "bf9e1d4c.a78fe",
+            "7a7d3c72.a23b14"
+        ],
+        "x": 1750,
+        "y": 1100,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "f40997b2.104348",
+        "type": "change",
+        "z": "46980af6.f32844",
+        "name": "ON メッセージ",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t   \"message\":\"record start -> \" & $fromMillis($millis(),'[Y0001]/[M01]/[D01] [H01]:[m01]:[s01] [z]','+0900'),\t   \"timestamp\":$millis()\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1320,
+        "y": 1100,
+        "wires": [
+            [
+                "76507840.9c5168"
+            ]
+        ]
+    },
+    {
+        "id": "a2509402.bd4188",
+        "type": "change",
+        "z": "46980af6.f32844",
+        "name": "OFF メッセージ",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t   \"message\":\"record end -> \" & $fromMillis($millis(),'[Y0001]/[M01]/[D01] [H01]:[m01]:[s01] [z]','+0900'),\t   \"timestamp\":$millis()\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1320,
+        "y": 1160,
+        "wires": [
+            [
+                "76507840.9c5168"
+            ]
+        ]
+    },
+    {
+        "id": "76507840.9c5168",
+        "type": "csv",
+        "z": "46980af6.f32844",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": false,
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "message,timestamp",
+        "skip": "0",
+        "strings": true,
+        "x": 1570,
+        "y": 1100,
+        "wires": [
+            [
+                "57769b25.d43b44"
+            ]
+        ]
+    },
+    {
+        "id": "7d460753.0fbc08",
+        "type": "comment",
+        "z": "46980af6.f32844",
+        "name": "データ記録開始スイッチ",
+        "info": "",
+        "x": 230,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "1f840a2a.055d46",
+        "type": "comment",
+        "z": "46980af6.f32844",
+        "name": "HoloLens TCP 記録",
+        "info": "",
+        "x": 150,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "b5468baf.5428d8",
+        "type": "comment",
+        "z": "46980af6.f32844",
+        "name": "Azure Kinect TCP 記録",
+        "info": "",
+        "x": 160,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "55c724ab.8893ac",
+        "type": "comment",
+        "z": "46980af6.f32844",
+        "name": "HoloLens 記録ボタン",
+        "info": "",
+        "x": 220,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "93562ce5.a722c",
+        "type": "inject",
+        "z": "46980af6.f32844",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 190,
+        "y": 1260,
+        "wires": [
+            [
+                "62f0f749.6047d8"
+            ]
+        ]
+    },
+    {
+        "id": "62f0f749.6047d8",
+        "type": "ui_switch",
+        "z": "46980af6.f32844",
+        "name": "",
+        "label": "HoloLens 機能",
+        "tooltip": "",
+        "group": "3c233d82.f46f12",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "x": 360,
+        "y": 1260,
+        "wires": [
+            [
+                "fc3ec41b.349028"
+            ]
+        ]
+    },
+    {
+        "id": "fc3ec41b.349028",
+        "type": "change",
+        "z": "46980af6.f32844",
+        "name": "global.activeHoloLens",
+        "rules": [
+            {
+                "t": "set",
+                "p": "activeHoloLens",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "29e59d6f.2ddd22",
+        "type": "comment",
+        "z": "46980af6.f32844",
+        "name": "Kinect 記録ボタン",
+        "info": "",
+        "x": 210,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "96d12286.7d51",
+        "type": "inject",
+        "z": "46980af6.f32844",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 190,
+        "y": 1360,
+        "wires": [
+            [
+                "74e52198.2e9e6"
+            ]
+        ]
+    },
+    {
+        "id": "4cb2035d.c0308c",
+        "type": "change",
+        "z": "46980af6.f32844",
+        "name": "global.activeKinect",
+        "rules": [
+            {
+                "t": "set",
+                "p": "activeKinect",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 1360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "72d53295.91438c",
+        "type": "switch",
+        "z": "46980af6.f32844",
+        "name": "global.activeHoloLens true",
+        "property": "activeHoloLens",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 940,
+        "y": 280,
+        "wires": [
+            [
+                "b6232edf.df795"
+            ]
+        ]
+    },
+    {
+        "id": "17ab4c54.811a14",
+        "type": "switch",
+        "z": "46980af6.f32844",
+        "name": "global.activeKinect true",
+        "property": "activeKinect",
+        "propertyType": "global",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 930,
+        "y": 180,
+        "wires": [
+            [
+                "cf8da0ad.c8c5a"
+            ]
+        ]
+    },
+    {
+        "id": "7dbc9432.07f3fc",
+        "type": "comment",
+        "z": "46980af6.f32844",
+        "name": "ダミーデータ HoloLens",
+        "info": "",
+        "x": 180,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "3e6358a9.ab0858",
+        "type": "inject",
+        "z": "46980af6.f32844",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 1500,
+        "wires": [
+            [
+                "9c5a35bf.6f5748"
+            ]
+        ]
+    },
+    {
+        "id": "9c5a35bf.6f5748",
+        "type": "change",
+        "z": "46980af6.f32844",
+        "name": "ダミー メッセージ",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\t   \"message\":\"dummy\" & $fromMillis($millis(),'[Y0001]/[M01]/[D01] [H01]:[m01]:[s01] [z]','+0900'),\t   \"timestamp\":$millis()\t}",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 1500,
+        "wires": [
+            [
+                "ee86dc99.913a8"
+            ]
+        ]
+    },
+    {
+        "id": "ee86dc99.913a8",
+        "type": "csv",
+        "z": "46980af6.f32844",
+        "name": "",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": false,
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "message,timestamp",
+        "skip": "0",
+        "strings": true,
+        "x": 650,
+        "y": 1500,
+        "wires": [
+            [
+                "95e2816f.ea64d"
+            ]
+        ]
+    },
+    {
+        "id": "cca46f7d.24d9a",
+        "type": "link in",
+        "z": "46980af6.f32844",
+        "name": "HoloLens ダミー",
+        "links": [
+            "95e2816f.ea64d"
+        ],
+        "x": 515,
+        "y": 320,
+        "wires": [
+            [
+                "e540da26.ef21c8"
+            ]
+        ]
+    },
+    {
+        "id": "95e2816f.ea64d",
+        "type": "link out",
+        "z": "46980af6.f32844",
+        "name": "HoloLens ダミー out",
+        "links": [
+            "cca46f7d.24d9a"
+        ],
+        "x": 795,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "e578788d.376248",
+        "type": "comment",
+        "z": "46980af6.f32844",
+        "name": "HoloLens 記録 CSV ファイルパス",
+        "info": "",
+        "x": 920,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "c58ea098.20d89",
+        "type": "inject",
+        "z": "46980af6.f32844",
+        "name": "デフォルトパス hololens-record.csv",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "C:\\Users\\tnkse\\Desktop\\hololens-record.csv",
+        "payloadType": "str",
+        "x": 930,
+        "y": 1260,
+        "wires": [
+            [
+                "2a264afc.885236"
+            ]
+        ]
+    },
+    {
+        "id": "cf8da0ad.c8c5a",
+        "type": "change",
+        "z": "46980af6.f32844",
+        "name": "ファイル名設定 filepathKinect",
+        "rules": [
+            {
+                "t": "set",
+                "p": "filename",
+                "pt": "msg",
+                "to": "filepathKinect",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1230,
+        "y": 180,
+        "wires": [
+            [
+                "a38464ea.44eb78"
+            ]
+        ]
+    },
+    {
+        "id": "b6232edf.df795",
+        "type": "change",
+        "z": "46980af6.f32844",
+        "name": "ファイル名設定 filepathHoloLens",
+        "rules": [
+            {
+                "t": "set",
+                "p": "filename",
+                "pt": "msg",
+                "to": "filepathHoloLens",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1240,
+        "y": 280,
+        "wires": [
+            [
+                "51075019.35e89"
+            ]
+        ]
+    },
+    {
+        "id": "2a264afc.885236",
+        "type": "ui_text_input",
+        "z": "46980af6.f32844",
+        "name": "",
+        "label": "HoloLens 記録 CSV ファイルパス",
+        "tooltip": "",
+        "group": "3c233d82.f46f12",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 1280,
+        "y": 1260,
+        "wires": [
+            [
+                "5a33ca78.707784"
+            ]
+        ]
+    },
+    {
+        "id": "f5af3146.8ff4a",
+        "type": "comment",
+        "z": "46980af6.f32844",
+        "name": "Kinect 記録 CSV ファイルパス",
+        "info": "",
+        "x": 910,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "5fbcf098.24398",
+        "type": "inject",
+        "z": "46980af6.f32844",
+        "name": "デフォルトパス kinect-record.csv",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "C:\\Users\\tnkse\\Desktop\\kinect-record.csv",
+        "payloadType": "str",
+        "x": 920,
+        "y": 1360,
+        "wires": [
+            [
+                "d77813b4.9498"
+            ]
+        ]
+    },
+    {
+        "id": "d77813b4.9498",
+        "type": "ui_text_input",
+        "z": "46980af6.f32844",
+        "name": "",
+        "label": "Kinect 記録 CSV ファイルパス",
+        "tooltip": "",
+        "group": "3c233d82.f46f12",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 1270,
+        "y": 1360,
+        "wires": [
+            [
+                "e80346cb.bf9588"
+            ]
+        ]
+    },
+    {
+        "id": "5a33ca78.707784",
+        "type": "change",
+        "z": "46980af6.f32844",
+        "name": "global.filepathHoloLens",
+        "rules": [
+            {
+                "t": "set",
+                "p": "filepathHoloLens",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1610,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e80346cb.bf9588",
+        "type": "change",
+        "z": "46980af6.f32844",
+        "name": "global.filepathKinect",
+        "rules": [
+            {
+                "t": "set",
+                "p": "filepathKinect",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1600,
+        "y": 1360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "412a5f00.4fd0a",
+        "type": "ui_text",
+        "z": "46980af6.f32844",
+        "group": "4fe042cc.7051ec",
+        "order": 5,
+        "width": "6",
+        "height": "3",
+        "name": "",
+        "label": "[HoloLens CSV]",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 1840,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "df752339.ba727",
+        "type": "ui_text",
+        "z": "46980af6.f32844",
+        "group": "4fe042cc.7051ec",
+        "order": 5,
+        "width": "6",
+        "height": "3",
+        "name": "",
+        "label": "[Kinect CSV]",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "x": 1830,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "117b4565.38b52b",
+        "type": "switch",
+        "z": "46980af6.f32844",
+        "name": "topic:switch-first チェック",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "switch-first",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 610,
+        "y": 1140,
+        "wires": [
+            [],
+            [
+                "af261695.7a5628"
+            ]
+        ]
+    },
+    {
+        "id": "f92808fd.ab42d8",
+        "type": "change",
+        "z": "46980af6.f32844",
+        "name": "global.recordSwitch",
+        "rules": [
+            {
+                "t": "set",
+                "p": "recordSwitch",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3c233d82.f46f12",
+        "type": "ui_group",
+        "z": "",
+        "name": "管理",
+        "tab": "65c98ea2.b199d",
+        "order": 1,
+        "disp": false,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "98db0617.e694d8",
+        "type": "ui_group",
+        "z": "",
+        "name": "列3",
+        "tab": "8e118f7.3bdb87",
+        "order": 3,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "b2db48ea.270ba8",
+        "type": "ui_group",
+        "z": "",
+        "name": "列2",
+        "tab": "8e118f7.3bdb87",
+        "order": 2,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "4fe042cc.7051ec",
+        "type": "ui_group",
+        "z": "",
+        "name": "列1",
+        "tab": "8e118f7.3bdb87",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "65c98ea2.b199d",
+        "type": "ui_tab",
+        "z": "",
+        "name": "管理画面",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "8e118f7.3bdb87",
+        "type": "ui_tab",
+        "z": "",
+        "name": "HoloLens",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
 ]
