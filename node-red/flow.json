@@ -1308,14 +1308,14 @@
               "vt": "str"
           }
       ],
-      "repeat": "1",
+      "repeat": "",
       "crontab": "",
       "once": false,
       "onceDelay": 0.1,
       "topic": "",
       "payload": "",
       "payloadType": "date",
-      "x": 190,
+      "x": 180,
       "y": 1360,
       "wires": [
           [
