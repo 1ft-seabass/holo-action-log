@@ -20,7 +20,7 @@ HoloLens 2 の Device Portal からアクセスして、メニューから Apps 
 
 ![image](https://i.gyazo.com/6da3c5e0f1f5190c3696abe1d3740a35.png)
 
-Select the application package の項目の `ファイルを選択` をクリックして。`holo-action-log-github\hololens2-app\1.0.0.0` フォルダの `HoloWoodActionLog_1.0.0.0_ARM64.appx` のファイルを選択して反映します。
+Select the application package の項目の `ファイルを選択` をクリックして。`holo-action-log-github\hololens2-app\1.0.0.0` フォルダの `HoloActionLog_1.0.0.0_ARM64.appx` のファイルを選択して反映します。
 
 ![image](https://i.gyazo.com/c0c8b49a3959aaf97d348c229bc7e58b.png)
 
